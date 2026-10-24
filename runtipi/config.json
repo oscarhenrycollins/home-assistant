@@ -1,0 +1,28 @@
+{
+  "name": "Home Assistant",
+  "id": "home-assistant",
+  "wizard_type": "external",
+  "available": true,
+  "short_desc": "External: connect the Home Assistant you already run at home, and your Wizard checks and controls your devices.",
+  "author": "Humanity Labs (connector for Home Assistant)",
+  "port": 8812,
+  "categories": [
+    "network"
+  ],
+  "description": "Connects your Wizard to the Home Assistant you already run (Raspberry Pi, Home Assistant Green or any other install). Paste its address and a long-lived access token once (Home Assistant: Profile, Security, Create token); they stay in this app's private storage and are never shown again. Your agent then checks and controls every device Home Assistant knows about, including Zigbee, Bluetooth and other local-only devices. Unlocking doors or disarming alarms always needs your yes. Your Wizard must be able to reach Home Assistant: on the same network, through Tailscale, or through Home Assistant Cloud. No Home Assistant? Install Smart Home instead. Keep it on your private network.",
+  "tipi_version": 1,
+  "version": "0.1.0",
+  "source": "https://github.com/oscarhenrycollins/home-assistant",
+  "website": "https://www.home-assistant.io",
+  "exposable": false,
+  "no_gui": true,
+  "supported_architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "created_at": 1792805445598,
+  "updated_at": 1792805445598,
+  "dynamic_config": true,
+  "min_tipi_version": "4.8.0",
+  "form_fields": []
+}

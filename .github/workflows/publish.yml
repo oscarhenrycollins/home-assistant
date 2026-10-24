@@ -1,0 +1,17 @@
+name: Publish to the Wizard App Index
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generated MCP front is up to date
+        run: python3 mcp/inline.py --check
+      - name: Publish (the index re-reads this repo and runs the wizard.md check)
+        run: |
+          curl -sS --fail-with-body -X POST https://apps.aiwizards.com/v1/publish \
+            -H 'content-type: application/json' \
+            -d "{\"repo\":\"${{ github.repository }}\"}"
